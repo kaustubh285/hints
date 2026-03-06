@@ -1,0 +1,10 @@
+echo 'src/
+.gitignore
+tsconfig.json
+bun.lock
+node_modules/
+*.log
+.DS_Store
+test/
+.github/
+project_plan.md

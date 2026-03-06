@@ -1,14 +1,43 @@
 {
 	"name": "@dev_desh/hints",
-	"version": "0.1.0",
+	"version": "1.0.0",
+	"description": "Smart terminal command hints for developers. Get intelligent explanations for commands and flags as you type.",
+	"main": "build/index.js",
 	"bin": {
 		"hints": "build/cli.js"
 	},
+	"keywords": [
+		"cli",
+		"terminal",
+		"hints",
+		"commands",
+		"developer-tools",
+		"shell",
+		"documentation",
+		"flags",
+		"help",
+		"learning"
+	],
+	"author": "Kaustubh Deshpande <kdevdeshpande@gmail.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kaustubh285/hints.git"
+	},
+	"homepage": "https://github.com/kaustubh285/hints#readme",
+	"bugs": {
+		"url": "https://github.com/kaustubh285/hints/issues"
+	},
+	"files": [
+		"build/**/*",
+		"README.md",
+		"LICENSE"
+	],
 	"scripts": {
 		"build": "tsc",
+		"prepublishOnly": "npm run build",
 		"dev": "tsx watch src/cli.ts",
-		"link": "bun link",
-		"resetup-local": "hints uninstall && hints status && bun unlink && bun run build && bun run link && hints install"
+		"link": "bun link"
 	},
 	"dependencies": {
 		"chalk": "^5.6.2",
@@ -21,5 +50,8 @@
 		"@types/shell-quote": "^1.7.5",
 		"tsx": "^4.21.0",
 		"typescript": "^5.9.3"
+	},
+	"engines": {
+		"node": ">=16.0.0"
 	}
 }
